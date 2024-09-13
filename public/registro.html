@@ -46,56 +46,24 @@
       </div>
     
 
-    <section>     
-        
-        <main class="contacto">
-          <div class="contenedor sombra">
-            <h2>Contacto</h2>
-
-            <form class="formulario" action="/procesar" method="get">
-                <fieldset>
-                    <legend>Contáctame llenando todos los campos</legend>
-
-                    <div class="contenedor-campos">
-
-                        <div class="campo">
-                            <label for="">Nombre y Apellido</label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
-                        </div>
-
-                        <div class="campo">
-                            <label for="">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
-                        </div>
-
-                        <div class="campo">
-                            <label for="">Correo</label>
-                            <input type="email" id="email" name="email" placeholder="email" required>
-                        </div>
-                        
-
-                        <div class="campo">
-                            <label for="message">Mensaje</label>
-                            <textarea name="message" id="message" placeholder="Escribe tu mensaje aquí"></textarea>
-                        </div>
-
-                    </div> <!-- contenedor-campos -->
-
-                    <div class="enviar alinear-derecha flex" >
-                        <input class="button w-100" type="submit" value="Enviar">
-                    </div>
-
-                </fieldset>
-
-            </form>
-        </main>
-      
-    </section>
+      <main class="confirmacion">
+        <div class="contenedor sombra">
+            <h2>¡Gracias por contactarnos!</h2>
+            <p>Hemos recibido tu mensaje con la siguiente información:</p>
+            <ul>
+                <li><strong>Nombre:</strong> <span id="nombre-confirmacion"></span></li>
+                <li><strong>Email:</strong> <span id="email-confirmacion"></span></li>
+                <li><strong>Teléfono:</strong> <span id="telefono-confirmacion"></span></li>
+                <li><strong>Mensaje:</strong> <span id="mensaje-confirmacion"></span></li>
+            </ul>
+            <p>Nos pondremos en contacto contigo pronto.</p>
+            <a href="index.html" class="button">Volver al inicio</a>
+        </div>
+    </main>
 
     <footer class="footer">
       <p>&copy; 2024 Nuestro Sitio Web. Todos los derechos reservados.</p>
     </footer>
     <script src="scripts/validar.js"></script>
-
   </body>
 </html>

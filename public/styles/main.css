@@ -131,14 +131,20 @@ h3 {
 
 .onheader {
     display: flex;
-    justify-content: space-between; /* Espacia los elementos a lo largo del contenedor */
-    align-items: center; /* Centra verticalmente los elementos */
-    padding: 1rem 2rem; /* Añade espacio alrededor de los elementos */
-    background-color: var(--white); /* Fondo blanco para el encabezado */
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem 2rem; 
+    background-color: var(--white);
+    flex-wrap: wrap; 
 }
 
-.onheader h1{
-    margin-left: 15rem;
+
+
+.onheader h1 {
+    margin-left: 0; 
+    text-align: center; 
+    width: 100%; 
+    order: 2; 
 }
 
 /* Logo */
@@ -152,13 +158,58 @@ h3 {
 .search-bar {
     display: flex;
     align-items: center;
+    width: 100%; 
+    order: 3; 
+    margin-top: 1rem; 
 }
 
 .search-bar input[type="text"] {
-    padding: 0.5rem;
-    font-size: 1.6rem;
-    border: 1px solid var(--grey);
-    border-radius: 0.5rem 0 0 0.5rem;
+    flex-grow: 1; 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .onheader {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .search-bar {
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .onheader {
+        flex-wrap: nowrap; 
+    }
+
+    .onheader h1 {
+        width: auto; 
+        order: 2; 
+        margin-left: 2rem; 
+        margin-right: 2rem; 
+    }
+
+    .logo {
+        order: 1; 
+    }
+
+    .search-bar {
+        width: auto; 
+        order: 3; 
+        margin-top: 0; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .onheader {
+        padding: 1rem 5rem; /* Increase padding on larger screens */
+    }
 }
 
 .search-bar button {
@@ -178,14 +229,15 @@ h3 {
 
 .nav-bg {
     background-color: var(--background-color);
-
+    width: 100%;
 }
 
 .primary_nav {
     display: flex;
-    justify-content: center; /* Centra los elementos de navegación horizontalmente */
-    gap: 2rem; /* Añade espacio entre los enlaces de navegación */
-    padding: 0; /* Elimina el padding adicional */
+    flex-direction: column;
+    align-items: center; 
+    gap: 2rem; 
+    padding: 0; 
 }
 
 @media (min-width: 768px) {
@@ -243,3 +295,152 @@ h3 {
     text-align: center;
     font-weight: 700;
    }
+
+/* Nosotrs */
+
+.nosotros {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.nosotros img {
+    width: 100%; 
+    height: auto;
+    margin: 0 auto; 
+    padding: 1rem;
+}
+
+.texto-nosotros {
+    font-size: 2.2rem;
+    margin: 0; 
+    padding: .5rem; 
+}
+
+@media (min-width: 768px) {
+    .nosotros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Formulario */
+
+.contacto {
+    margin-top: 2rem;
+    }
+
+    .formulario {
+        background-color: var(--background-color);
+        width: min(60 rem, 100%); /** Utilizar el valor más pequeño **/
+        margin: 0 auto; /* Centrar cuando sea Block */
+        padding: 2rem;
+        border-radius: 1rem;
+      }
+
+      .formulario fieldset{
+        border: none;
+      }
+      
+      .formulario legend {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        color: var(--white);
+      }
+
+      @media (min-width: 768px) {
+        .contenedor-campos {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: auto auto 20rem;
+          gap: 2rem;
+        }
+      
+        .campo:nth-child(3),
+        .campo:nth-child(4) {
+          grid-column: 1 / 3;
+        }
+      }
+      
+      .campo {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .campo textarea {
+        resize: none;
+        height: 15rem;
+      }
+      
+      .campo label {
+        font-size: 1.8rem;
+        color: var(--white);
+        font-weight: 700;
+        margin-bottom: .5rem;
+      }
+      
+      .campo input, .campo textarea {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        border-radius: 5px;
+      }
+      
+      .enviar .button { 
+        background-color: var(--secundary-color);
+      }
+
+/* REGISTRO */
+
+
+.confirmacion {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 80%;
+}
+
+.confirmacion .contenedor {
+    text-align: center;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 15px rgba(112, 112, 112, 0.5);
+}
+
+.confirmacion h2 {
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.confirmacion p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--grey);
+    margin-bottom: 2rem;
+}
+
+.confirmacion ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    color: var(--grey);
+}
+
+.confirmacion ul li {
+    margin-bottom: 0.5rem;
+}
+
+.confirmacion ul li strong {
+    color: var(--primary-color);
+}
+
+.confirmacion a.button {
+    margin-top: 2rem;
+}

@@ -29,7 +29,7 @@ const server = http.createServer((req, res) => {
             contentType = 'image/jpeg';
             break;
         case '.html':
-            contentType = 'text/html'; // Asegurar el tipo de contenido HTML
+            contentType = 'text/html'; 
             break;
         default:
             contentType = 'text/plain';

@@ -11,13 +11,11 @@ const server = http.createServer((req, res) => {
     let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url);
 
     console.log('Requested URL:', parsedUrl.pathname);
-
-      // Manejar la ruta /formulario
+      
       if (parsedUrl.pathname === '/formulario') {
         filePath = path.join(__dirname, 'public', 'formulario.html');
     }
-
-    // Manejar la ruta /procesar
+    
     if (parsedUrl.pathname === '/procesar') {
         filePath = path.join(__dirname, 'public', 'registro.html');      
     }

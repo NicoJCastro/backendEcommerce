@@ -97,15 +97,14 @@ h3 {
 
 .title {
     font-weight: 700;
-    color: var(--primary-color);   
-    /* text-transform: uppercase;   */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
+    color: var(--primary-color);    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
-  }
-  
-  .title span {
+}
+
+.title span {
     font-size: 2rem;
-  }
+}
 
 /* Utilidades */
 
@@ -131,40 +130,40 @@ h3 {
 
 .onheader {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem; 
+    padding: 1rem 2rem;
     background-color: var(--white);
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 
 
 .onheader h1 {
-    margin-left: 0; 
-    text-align: center; 
-    width: 100%; 
-    order: 2; 
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+    order: 2;
 }
 
 /* Logo */
 .logo img {
-    max-width: 8rem; 
-    max-height: 8rem; 
-    height: auto; 
+    max-width: 8rem;
+    max-height: 8rem;
+    height: auto;
 }
 
 /* Barra de búsqueda */
 .search-bar {
     display: flex;
     align-items: center;
-    width: 100%; 
-    order: 3; 
-    margin-top: 1rem; 
+    width: 100%;
+    order: 3;
+    margin-top: 1rem;
 }
 
 .search-bar input[type="text"] {
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 /* Responsive styles */
@@ -185,30 +184,31 @@ h3 {
 
 @media (min-width: 769px) {
     .onheader {
-        flex-wrap: nowrap; 
+        flex-wrap: nowrap;
     }
 
     .onheader h1 {
-        width: auto; 
-        order: 2; 
-        margin-left: 2rem; 
-        margin-right: 2rem; 
+        width: auto;
+        order: 2;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
     .logo {
-        order: 1; 
+        order: 1;
     }
 
     .search-bar {
-        width: auto; 
-        order: 3; 
-        margin-top: 0; 
+        width: auto;
+        order: 3;
+        margin-top: 0;
     }
 }
 
 @media (min-width: 1024px) {
     .onheader {
-        padding: 1rem 5rem; /* Increase padding on larger screens */
+        padding: 1rem 5rem;
+        /* Increase padding on larger screens */
     }
 }
 
@@ -235,9 +235,9 @@ h3 {
 .primary_nav {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    gap: 2rem; 
-    padding: 0; 
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -262,7 +262,7 @@ h3 {
 
 /* HERO */
 
-.hero{
+.hero {
     background-image: url(../images/tienda2.jpg);
     background-size: cover;
     background-position: center;
@@ -276,25 +276,26 @@ h3 {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
-    height: 100%;  
-    padding: 2rem; 
-  
+    height: 100%;
+    padding: 2rem;
+
     /* coidog para alienar horizontal y verticalmente al centro */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
+}
 
-  .hero-content h2, .hero-content p {
+.hero-content h2,
+.hero-content p {
     color: var(--white);
-  }
+}
 
-  .footer {
+.footer {
     text-align: center;
     font-weight: 700;
-   }
+}
 
 /* Nosotrs */
 
@@ -307,16 +308,17 @@ h3 {
 }
 
 .nosotros img {
-    width: 100%; 
+    width: 100%;
     height: auto;
-    margin: 0 auto; 
+    margin: 0 auto;
     padding: 1rem;
 }
 
 .texto-nosotros {
     font-size: 2.2rem;
-    margin: 0; 
-    padding: .5rem; 
+    margin: 0 auto;
+    padding: .5rem;
+    line-height: 1.5;
 }
 
 @media (min-width: 768px) {
@@ -328,72 +330,97 @@ h3 {
 /* Formulario */
 
 .contacto {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 0.5rem;
     margin-top: 2rem;
+}
+
+.contenedor.sombra {
+    margin-top: 2rem;
+    width: 90%; 
+    height: auto;    
+}
+
+@media (min-width: 768px) {
+    .contacto {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.imagen-formulario {
+    width: 90%;
+    height: auto;
+    border-radius: 50% ;
+    padding: 1rem;
+    margin: 0 auto;    
+}
+
+.formulario {
+    background-color: var(--background-color);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 20rem;
+        gap: 2rem;
     }
 
-    .formulario {
-        background-color: var(--background-color);
-        width: min(60 rem, 100%); /** Utilizar el valor más pequeño **/
-        margin: 0 auto; /* Centrar cuando sea Block */
-        padding: 2rem;
-        border-radius: 1rem;
-      }
+    .campo:nth-child(3),
+    .campo:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+}
 
-      .formulario fieldset{
-        border: none;
-      }
-      
-      .formulario legend {
-        text-align: center;
-        font-size: 1.8rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 2rem;
-        color: var(--white);
-      }
+.campo {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
 
-      @media (min-width: 768px) {
-        .contenedor-campos {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: auto auto 20rem;
-          gap: 2rem;
-        }
-      
-        .campo:nth-child(3),
-        .campo:nth-child(4) {
-          grid-column: 1 / 3;
-        }
-      }
-      
-      .campo {
-        margin-bottom: 1rem;
-        display: flex;
-        flex-direction: column;
-      }
-      
-      .campo textarea {
-        resize: none;
-        height: 15rem;
-      }
-      
-      .campo label {
-        font-size: 1.8rem;
-        color: var(--white);
-        font-weight: 700;
-        margin-bottom: .5rem;
-      }
-      
-      .campo input, .campo textarea {
-        width: 100%;
-        padding: 1rem;
-        border: none;
-        border-radius: 5px;
-      }
-      
-      .enviar .button { 
-        background-color: var(--secundary-color);
-      }
+.campo textarea {
+    resize: none;
+    height: 15rem;
+}
+
+.campo label {
+    font-size: 1.8rem;
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.enviar .button {
+    background-color: var(--secundary-color);
+}
 
 /* REGISTRO */
 
@@ -444,3 +471,117 @@ h3 {
 .confirmacion a.button {
     margin-top: 2rem;
 }
+
+/* Estilos para el catálogo */
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.producto {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.producto h3 {
+    font-size: 1.8rem;
+    margin: 1rem;
+}
+
+.producto p {
+    font-size: 1.4rem;
+    margin: 0 1rem 1rem;
+}
+
+.producto .precio {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.producto .button {
+    display: block;
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+/* Estilos para la página de producto */
+.producto-detalle {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .producto-detalle {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.producto-info h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.producto-info .precio {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.producto-info .descripcion {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.producto-info .caracteristicas {
+    font-size: 1.4rem;
+    list-style-type: disc;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.compra-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.compra-form label {
+    font-size: 1.6rem;
+}
+
+.compra-form input[type="number"] {
+    width: 5rem;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.compra-form .button {
+    flex-grow: 1;
+}
+

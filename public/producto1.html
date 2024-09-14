@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcomMercado - Tu Tienda Online</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="preload" href="styles/main.css" as="style" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="onheader">
+      <div class="logo">
+        <a href="index.html"><img src="images/ecoMercado.jpg" alt="EcomMercado Logo" /></a>
+      </div>
+      <!-- Logo -->
+
+      <h1 class="title">EcomMercado <span>Tu Tienda Online</span> </h1>
+
+      <!-- Barra de búsqueda -->
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar productos..." />
+        <button aria-label="Buscar productos">Buscar</button>
+      </div>
+    </div>
+    <!-- onheader -->
+  </header>
+
+  <div class="nav-bg">
+    <nav class="primary_nav contenedor">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo de Productos</a>
+      <a href="nosotros.html">Quiénes Somos</a>
+      <a href="formulario.html">Contáctanos</a>
+    </nav>
+  </div>
+
+
+  <section>
+    <main class="contenedor sombra">
+      <div class="producto-detalle">
+        <div class="producto-imagen">
+          <img src="images/producto1.jpg" alt="Producto 1">
+        </div>
+        <div class="producto-info">
+          <h2>Camisa de Algodón Orgánico</h2>
+          <p class="precio">$19.99</p>
+          <p class="descripcion">La camisa de algodón orgánico es una elección excelente para aquellos que valoran la
+            suavidad y la transpirabilidad. Confeccionada con tejido de algodón orgánico, esta camisa ofrece una
+            sensación suave al tacto y permite una excelente ventilación, manteniéndote fresco y cómodo. Los colores
+            naturales utilizados no contienen tintes químicos, protegiendo tanto el medio ambiente como tu piel. Su
+            corte clásico y elegante la hace perfecta para cualquier ocasión, con un estilo atemporal y sofisticado.</p>
+          <ul class="caracteristicas">
+            <li>Tejido transpirable y suave</li>
+            <li>Colores naturales sin tintes químicos</li>
+            <li>Corte clásico y elegante</li>
+          </ul>
+          <form class="compra-form">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" value="1" min="1">
+            <button type="submit" class="button">Agregar al carrito</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 Nuestro Sitio Web. Todos los derechos reservados.</p>
+  </footer>
+</body>
+
+</html>

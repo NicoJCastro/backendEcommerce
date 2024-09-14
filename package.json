@@ -1,0 +1,19 @@
+{
+  "name": "backendecommerce",
+  "version": "1.0.0",
+  "description": "tienda estilo e-commerce",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoJCastro/backendEcommerce.git"
+  },
+  "author": "Nicolas Castro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoJCastro/backendEcommerce/issues"
+  },
+  "homepage": "https://github.com/NicoJCastro/backendEcommerce#readme"
+}

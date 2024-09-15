@@ -1,20 +1,20 @@
+// Importo Módulos
+
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const url = require('url');
 
-
+// Configuro el puerto
 const PORT = 3020;
 
-const server = http.createServer((req, res) => {
-    const parsedUrl = url.parse(req.url, true);
-    let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url);
+// Creo el servidor http
+const server = http.createServer((req, res) => { //request y response
+    const parsedUrl = url.parse(req.url, true); //analiza la URL y devuelve un objeto URL con cada parte de la dirección
+    let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url); //determina la ruta de un archivo
 
-    console.log('Requested URL:', parsedUrl.pathname);
-      
-      if (parsedUrl.pathname === '/formulario') {
-        filePath = path.join(__dirname, 'public', 'formulario.html');
-    }
+    console.log('Requested URL:', parsedUrl.pathname);      
+    
     
     if (parsedUrl.pathname === '/procesar') {
         filePath = path.join(__dirname, 'public', 'registro.html');      

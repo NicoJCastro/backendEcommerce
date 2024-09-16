@@ -9,9 +9,9 @@ const url = require('url');
 const PORT = 3020;
 
 // Creo el servidor http
-const server = http.createServer((req, res) => { //request y response
-    const parsedUrl = url.parse(req.url, true); //analiza la URL y devuelve un objeto URL con cada parte de la dirección
-    let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url); //determina la ruta de un archivo
+const server = http.createServer((req, res) => { 
+    const parsedUrl = url.parse(req.url, true); 
+    let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url); 
 
     console.log('Requested URL:', parsedUrl.pathname);      
     
